@@ -3,7 +3,7 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
-    padding: 1rem 2rem;
+    padding: 1rem 3rem;
     position: fixed;
     top: 0;
     width: 100%;
@@ -22,8 +22,7 @@ ul.social-links  a, ul.social-links svg path, .menu-toggle, .burger-bar, #logo, 
 }
 
 #logo path{
-    /**fill: var(--secondary-light);**/
-    fill: #ff6a57;
+    fill: var(--secondary-light);
 }
 #logo {
     height: 70px;
@@ -46,7 +45,6 @@ ul.social-links  a, ul.social-links svg path, .menu-toggle, .burger-bar, #logo, 
     height: 1px;
     width: 1px;
     border-radius: 50%;
-    background: red;
     position: absolute;
     box-shadow: 0 0 0 0 #ffc0cbd9;
 }
@@ -78,7 +76,7 @@ ul.social-links  a, ul.social-links svg path, .menu-toggle, .burger-bar, #logo, 
 }
 
 .social-links  a:hover svg path{
-    fill: red !important;
+    fill: var(--primary-dark);
 }
 
 /**socials links end**/
@@ -112,7 +110,7 @@ ul.social-links  a, ul.social-links svg path, .menu-toggle, .burger-bar, #logo, 
 }
 
 .menu-toggle:hover .burger-bar, .menu-active .burger-bar {
-    background: red;
+    background: var(--primary-dark);
 }
 
 .menu-active .menu-toggle :nth-child(2){
@@ -167,7 +165,7 @@ a.contact-link {
     display: inline-block;
     padding: 0.5rem 0;
     font-size: 25px;
-    color: #ff624e;
+    color: var(--primary-dark);
     font-weight: 500;
 }
 
@@ -176,7 +174,7 @@ a.contact-link {
     display: block;
     height: 2px;
     width: 0;
-    background: #ff624e;
+    background: var(--primary-dark);
 }
 
 .navigation li:hover a:after{

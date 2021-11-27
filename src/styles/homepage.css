@@ -1,23 +1,28 @@
 main{
     min-height: 100vh;
     display: flex;
+    justify-content: space-between;
 }
 
 
 .intro, .artiles-list{
     min-height: 100%;
     padding-top: 70px;
-    padding-left: 3rem;
 }
 
 .intro{
     background: var(--primary);
     width: 42%;
     position: relative;
+    padding-left: 4rem;
 }
 
 .artiles-list{
-    width: 57%;
+    width: 53%;
+    padding-right: 5rem;
+    padding-left: 2.5rem;
+    display: flex;
+    flex-direction: column;
 }
 
 .intro-articles{

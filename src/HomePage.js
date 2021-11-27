@@ -1,5 +1,5 @@
 import "./styles/homepage.css"
-import FeaturedArticle from "./components/FeaturedArticle";
+import {FeaturedArticle, FeaturedListItem, ListItem} from "./components/ArticleItems";
 
 const ARTICLES = [
     {
@@ -44,8 +44,8 @@ const ARTICLES = [
         content: "",
         author: "",
         cover: "https://via.placeholder.com/200",
-        date: "Aujourdhui",
-        opened: false,
+        date: "Hier",
+        opened: true,
         featured: false,
         listFeatured: false,
         videoCover: false,
@@ -68,8 +68,8 @@ const ARTICLES = [
         content: "",
         author: "",
         cover: "https://via.placeholder.com/200",
-        date: "Aujourdhui",
-        opened: false,
+        date: "Il y a 5j.",
+        opened: true,
         featured: false,
         listFeatured: false,
         videoCover: false,
@@ -79,11 +79,11 @@ const ARTICLES = [
         title: "Lorem ipsum dolor sit amet consectetur adipiscing elit etiam",
         content: "",
         author: "",
-        cover: "https://via.placeholder.com/200",
-        date: "Aujourdhui",
-        opened: false,
+        cover: "https://via.placeholder.com/600",
+        date: "Il y a 3j.",
+        opened: true,
         featured: false,
-        listFeatured: false,
+        listFeatured: true,
         videoCover: false,
     },
     {
@@ -92,7 +92,7 @@ const ARTICLES = [
         content: "",
         author: "",
         cover: "https://via.placeholder.com/200",
-        date: "Aujourdhui",
+        date: "Hier",
         opened: false,
         featured: false,
         listFeatured: false,
@@ -104,7 +104,7 @@ const ARTICLES = [
         content: "",
         author: "",
         cover: "https://via.placeholder.com/200",
-        date: "Aujourdhui",
+        date: "Hier",
         opened: false,
         featured: false,
         listFeatured: false,
@@ -116,7 +116,7 @@ const ARTICLES = [
         content: "",
         author: "",
         cover: "https://via.placeholder.com/200",
-        date: "Aujourdhui",
+        date: "Hier",
         opened: false,
         featured: false,
         listFeatured: false,
@@ -128,7 +128,7 @@ const ARTICLES = [
         content: "",
         author: "",
         cover: "https://via.placeholder.com/200",
-        date: "Aujourdhui",
+        date: "Hier",
         opened: false,
         featured: false,
         listFeatured: false,
@@ -140,7 +140,7 @@ const ARTICLES = [
         content: "",
         author: "",
         cover: "https://via.placeholder.com/200",
-        date: "Aujourdhui",
+        date: "Hier",
         opened: false,
         featured: false,
         listFeatured: false,
@@ -152,7 +152,7 @@ const ARTICLES = [
         content: "",
         author: "",
         cover: "https://via.placeholder.com/200",
-        date: "Aujourdhui",
+        date: "Hier",
         opened: false,
         featured: false,
         listFeatured: false,
@@ -164,7 +164,7 @@ const ARTICLES = [
         content: "",
         author: "",
         cover: "https://via.placeholder.com/200",
-        date: "Aujourdhui",
+        date: "Hier",
         opened: false,
         featured: false,
         listFeatured: false,
@@ -176,7 +176,7 @@ const ARTICLES = [
         content: "",
         author: "",
         cover: "https://via.placeholder.com/200",
-        date: "Aujourdhui",
+        date: "Hier",
         opened: false,
         featured: false,
         listFeatured: false,
@@ -191,7 +191,7 @@ const HomePage = () => {
                    {
                        ARTICLES.map(item => {
                            if (item.featured){
-                               return <FeaturedArticle title={item.title} cover={item.cover} date={item.date} videoCover={item.videoCover} />
+                               return <FeaturedArticle key={item.id} title={item.title} cover={item.cover} date={item.date} videoCover={item.videoCover} />
                            }
                            return null
                        })
@@ -199,7 +199,17 @@ const HomePage = () => {
                </div>
            </div>
             <div className="artiles-list">
-                    artiles
+                {
+                    ARTICLES.map(item => {
+                        if (item.featured){
+                            return null
+                        }
+                        if (item.listFeatured){
+                            return <FeaturedListItem key={item.id} title={item.title} cover={item.cover} date={item.date} videoCover={item.videoCover} opened={item.opened}/>
+                        }
+                        return<ListItem key={item.id} title={item.title} cover={item.cover} date={item.date} videoCover={item.videoCover} opened={item.opened}/>
+                    })
+                }
             </div>
         </main>
     )
