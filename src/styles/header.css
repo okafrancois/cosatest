@@ -4,6 +4,10 @@ header {
     justify-content: space-between;
     align-items: flex-start;
     padding: 1rem 2rem;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 100;
 }
 
 ul.social-links  a, ul.social-links svg path, .menu-toggle, .burger-bar, #logo, .main-menu, .navigation li a:after, .logo-link:before, .ext-links > a::after {
@@ -48,7 +52,7 @@ ul.social-links  a, ul.social-links svg path, .menu-toggle, .burger-bar, #logo, 
 }
 
 .logo-link:hover:before{
-    box-shadow: 0 0 200px 250px #ffc0cbd9;
+    box-shadow: 0 0 200px 250px rgba(255, 106, 87, 0.5);
 }
 
 /**Logo end**/
@@ -138,7 +142,7 @@ ul.social-links  a, ul.social-links svg path, .menu-toggle, .burger-bar, #logo, 
     right: 0;
     top: 0;
     width: 0;
-    height: 100%;
+    height: 100vh;
     overflow: hidden;
     display: flex;
     flex-direction: column;
@@ -162,7 +166,7 @@ a.contact-link {
 .navigation li a {
     display: inline-block;
     padding: 0.5rem 0;
-    font-size: 1.2rem;
+    font-size: 25px;
     color: #ff624e;
     font-weight: 500;
 }
@@ -183,6 +187,7 @@ a.contact-link {
     width: 45%;
     display: flex;
     align-items: center;
+    font-size: 14px;
 }
 
 .ext-links > a::after{

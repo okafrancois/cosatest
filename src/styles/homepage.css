@@ -1,0 +1,30 @@
+main{
+    min-height: 100vh;
+    display: flex;
+}
+
+
+.intro, .artiles-list{
+    min-height: 100%;
+    padding-top: 70px;
+    padding-left: 3rem;
+}
+
+.intro{
+    background: var(--primary);
+    width: 42%;
+    position: relative;
+}
+
+.artiles-list{
+    width: 57%;
+}
+
+.intro-articles{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: flex-end;
+    position: relative;
+    right: -20px;
+}
