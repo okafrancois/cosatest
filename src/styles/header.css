@@ -6,7 +6,7 @@ header {
     padding: 1rem 2rem;
 }
 
-ul.social-links  a, ul.social-links svg path, .menu-toggle, .burger-bar, #logo {
+ul.social-links  a, ul.social-links svg path, .menu-toggle, .burger-bar, #logo, .main-menu, .navigation li a:after, .logo-link:before, .ext-links > a::after {
     transition: all 0.2s ease;
 }
 
@@ -14,10 +14,12 @@ ul.social-links  a, ul.social-links svg path, .menu-toggle, .burger-bar, #logo {
 .logo-link{
     width: auto;
     position: relative;
+    z-index: 100;
 }
 
 #logo path{
-    fill: var(--secondary-light);
+    /**fill: var(--secondary-light);**/
+    fill: #ff6a57;
 }
 #logo {
     height: 70px;
@@ -26,23 +28,40 @@ ul.social-links  a, ul.social-links svg path, .menu-toggle, .burger-bar, #logo {
     display: block;
 }
 
-#logo:hover {
-    height: 49px;
-    width: auto;
-    transform: scale(3.5);
-    transform-origin: top left;
+#logo:hover{
+    height: calc(5rem *2);
 }
 
+.menu-active #logo path {
+    fill: #ff6a57;
+}
+
+.logo-link:before {
+    content: "";
+    display: block;
+    height: 1px;
+    width: 1px;
+    border-radius: 50%;
+    background: red;
+    position: absolute;
+    box-shadow: 0 0 0 0 #ffc0cbd9;
+}
+
+.logo-link:hover:before{
+    box-shadow: 0 0 200px 250px #ffc0cbd9;
+}
 
 /**Logo end**/
 
 /**socials links**/
 
-ul.social-links {
+.social-links {
     display: flex;
+    position: relative;
+    z-index: 100;
 }
 
-ul.social-links  a {
+.social-links  a {
     display: inline-block;
     margin: 0 5px;
     height: 40px;
@@ -72,9 +91,11 @@ ul.social-links  a {
     justify-content: center;
     flex-direction: column;
     cursor: pointer;
+    position: relative;
+    z-index: 100;
 }
 
-.menu-toggle:hover{
+.menu-toggle:hover, .menu-active .menu-toggle{
     background: var(--primary-light);
 }
 
@@ -86,13 +107,12 @@ ul.social-links  a {
     border-radius: 5px;
 }
 
-.menu-toggle:hover .burger-bar{
+.menu-toggle:hover .burger-bar, .menu-active .burger-bar {
     background: red;
 }
 
 .menu-active .menu-toggle :nth-child(2){
     opacity: 0;
-    width: 0;
 }
 
 .menu-active .menu-toggle :nth-child(1){
@@ -105,12 +125,76 @@ ul.social-links  a {
     transform: rotateZ(-45deg);
 }
 
+.menu-active .menu-toggle .burger-bar {
+    width: 105%;
+}
+
 /**menu toggle end**/
 
 /**main navigation**/
+.main-menu{
+    background: linear-gradient(90deg, rgba(255,255,255,0.4990371148459384) 0%, rgba(255,255,255,1) 55%);;
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 0;
+    height: 100%;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    padding: 6rem 0;
+}
 
-nav.main-menu {
-    display: none;
+.menu-active .main-menu{
+    width: 100%;
+}
+
+.navigation{
+    width: 45%;
+    height: 100%;
+}
+
+a.contact-link {
+    width: 50%;
+}
+
+.navigation li a {
+    display: inline-block;
+    padding: 0.5rem 0;
+    font-size: 1.2rem;
+    color: #ff624e;
+    font-weight: 500;
+}
+
+.navigation li a:after{
+    content: "";
+    display: block;
+    height: 2px;
+    width: 0;
+    background: #ff624e;
+}
+
+.navigation li:hover a:after{
+    width: 100%;
+}
+
+.ext-links {
+    width: 45%;
+    display: flex;
+    align-items: center;
+}
+
+.ext-links > a::after{
+    content: "";
+    display: block;
+    height: 2px;
+    width: 0;
+    background: #000;
+}
+
+.ext-links > a:hover::after{
+    width: 100%;
 }
 
 /**main navigation end**/
