@@ -3,4 +3,8 @@
     --primary-light: #F9F0EF;
     --secondary-light: #FFFF93;
     --primary-dark: indianred;
+    --large: 960px;
+    --medium: 720px;
+    --small: 560px;
+    --xsmall: 360px
 }

@@ -198,9 +198,12 @@ const HomePage = () => {
                    }
                </div>
            </div>
-            <div className="artiles-list">
+            <div className="content">
                 {
                     ARTICLES.map(item => {
+                        if (item.id > 11){
+                            return  null
+                        }
                         if (item.featured){
                             return null
                         }

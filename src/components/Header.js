@@ -32,8 +32,8 @@ const Header = () => {
                   <li><a href="/">Etiam rutrum</a></li>
               </ul>
               <div className="ext-links">
-                  <a href="/">Contact</a>
                   <SocialLinks/>
+                  <a href="/">Contact</a>
               </div>
           </nav>
       </header>

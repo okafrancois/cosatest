@@ -11,7 +11,7 @@ header {
 }
 
 ul.social-links  a, ul.social-links svg path, .menu-toggle, .burger-bar, #logo, .main-menu, .navigation li a:after, .logo-link:before, .ext-links > a::after {
-    transition: all 0.2s ease;
+    transition: all 0.3s ease;
 }
 
 /**Logo**/
@@ -97,7 +97,7 @@ ul.social-links  a, ul.social-links svg path, .menu-toggle, .burger-bar, #logo, 
     z-index: 100;
 }
 
-.menu-toggle:hover, .menu-active .menu-toggle{
+.menu-toggle:hover{
     background: var(--primary-light);
 }
 
@@ -109,7 +109,7 @@ ul.social-links  a, ul.social-links svg path, .menu-toggle, .burger-bar, #logo, 
     border-radius: 5px;
 }
 
-.menu-toggle:hover .burger-bar, .menu-active .burger-bar {
+.menu-toggle:hover .burger-bar {
     background: var(--primary-dark);
 }
 
@@ -153,7 +153,7 @@ ul.social-links  a, ul.social-links svg path, .menu-toggle, .burger-bar, #logo, 
 }
 
 .navigation{
-    width: 45%;
+    width: 50%;
     height: 100%;
 }
 
@@ -200,4 +200,39 @@ a.contact-link {
     width: 100%;
 }
 
+.main-menu .social-links{
+    display: none;
+}
+
 /**main navigation end**/
+
+/** small breakpoint **/
+@media all and (max-width: 560px){
+    header {
+        padding: 1rem 2rem;
+    }
+
+    header > .social-links {
+        display: none;
+    }
+
+    .main-menu{
+        background: #fff;
+    }
+
+    .main-menu .navigation, .ext-links{
+        width: 100%;
+        padding: 0 2rem;
+    }
+    .main-menu .social-links{
+        display: flex;
+    }
+
+    .ext-links {
+        justify-content: space-between;
+    }
+
+    #logo {
+        height: 40px;
+    }
+}
