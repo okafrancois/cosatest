@@ -1,0 +1,116 @@
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 1rem 2rem;
+}
+
+ul.social-links  a, ul.social-links svg path, .menu-toggle, .burger-bar, #logo {
+    transition: all 0.2s ease;
+}
+
+/**Logo**/
+.logo-link{
+    width: auto;
+    position: relative;
+}
+
+#logo path{
+    fill: var(--secondary-light);
+}
+#logo {
+    height: 70px;
+    width: auto;
+    position: absolute;
+    display: block;
+}
+
+#logo:hover {
+    height: 49px;
+    width: auto;
+    transform: scale(3.5);
+    transform-origin: top left;
+}
+
+
+/**Logo end**/
+
+/**socials links**/
+
+ul.social-links {
+    display: flex;
+}
+
+ul.social-links  a {
+    display: inline-block;
+    margin: 0 5px;
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+}
+
+.social-links  li:hover a{
+    background: var(--primary-light);
+}
+
+.social-links  a:hover svg path{
+    fill: red !important;
+}
+
+/**socials links end**/
+
+/**menu toggle**/
+
+.menu-toggle{
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    padding: 0 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.menu-toggle:hover{
+    background: var(--primary-light);
+}
+
+.burger-bar{
+    margin: 2px 0;
+    height: 3px;
+    width: 100%;
+    background: #000;
+    border-radius: 5px;
+}
+
+.menu-toggle:hover .burger-bar{
+    background: red;
+}
+
+.menu-active .menu-toggle :nth-child(2){
+    opacity: 0;
+    width: 0;
+}
+
+.menu-active .menu-toggle :nth-child(1){
+    transform-origin: left top;
+    transform: rotateZ(45deg);
+}
+
+.menu-active .menu-toggle :nth-child(3){
+    transform-origin: left bottom;
+    transform: rotateZ(-45deg);
+}
+
+/**menu toggle end**/
+
+/**main navigation**/
+
+nav.main-menu {
+    display: none;
+}
+
+/**main navigation end**/
