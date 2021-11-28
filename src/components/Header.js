@@ -19,8 +19,6 @@ const Header = () => {
           <SocialLinks/>
           <div className="menu-toggle burger" onClick={toggleMenu}>
               <div className="burger-bar"/>
-              <div className="burger-bar"/>
-              <div className="burger-bar"/>
           </div>
           <nav className={"main-menu"}>
               <ul className={"navigation"}>

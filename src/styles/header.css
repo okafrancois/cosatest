@@ -10,7 +10,7 @@ header {
     z-index: 100;
 }
 
-ul.social-links  a, ul.social-links svg path, .menu-toggle, .burger-bar, #logo, .main-menu, .navigation li a:after, .logo-link:before, .ext-links > a::after {
+ul.social-links  a, ul.social-links svg path, .menu-toggle, .burger-bar, #logo, .main-menu, .navigation li a:after, .logo-link:before, .ext-links > a::after, .menu-toggle:hover:before, .menu-toggle:hover:after {
     transition: all 0.3s ease;
 }
 
@@ -113,27 +113,43 @@ header > .social-links{
     border-radius: 5px;
 }
 
-.menu-toggle:hover .burger-bar {
+.menu-toggle:before, .menu-toggle:after{
+    content: "";
+    display: block;
+    background: #000;
+    width: 100%;
+    height: 3px;
+    position: relative;
+    border-radius: 3px;
+}
+
+.menu-toggle:before{
+    top: -2px;
+}
+
+.menu-toggle:after{
+    bottom: -2px;
+}
+
+.menu-toggle:hover .burger-bar, .menu-toggle:hover:before, .menu-toggle:hover:after {
     background: var(--primary-dark);
 }
 
-.menu-active .menu-toggle :nth-child(2){
+.menu-active .menu-toggle .burger-bar{
     opacity: 0;
+    width: 0;
 }
 
-.menu-active .menu-toggle :nth-child(1){
-    transform-origin: left top;
-    transform: rotateZ(45deg);
+.menu-active .menu-toggle:before {
+    transform: rotate(35deg) translate(3px);
+    transform-origin: top left;
 }
 
-.menu-active .menu-toggle :nth-child(3){
-    transform-origin: left bottom;
-    transform: rotateZ(-45deg);
+.menu-active .menu-toggle:after {
+    transform: rotate(-35deg) translate(3px);
+    transform-origin: bottom left;
 }
 
-.menu-active .menu-toggle .burger-bar {
-    width: 105%;
-}
 
 /**menu toggle end**/
 
@@ -176,7 +192,6 @@ a.contact-link {
     position: relative;
     right: -50px;
 }
-
 
 .navigation li:nth-child(1) a{
     transition-delay: 0.1s;
