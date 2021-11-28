@@ -1,5 +1,7 @@
 import "./styles/homepage.css"
 import {FeaturedArticle, FeaturedListItem, ListItem} from "./components/ArticleItems";
+import {fingerIcon} from "./img/svgIcons";
+import SocialLinks from "./components/SocialLinks";
 
 const ARTICLES = [
     {
@@ -216,7 +218,18 @@ const HomePage = () => {
                     }
                 </div>
                 <div className="newsletter">
-                   Hello there
+                   <div className="container">
+                       <h3>NewsL<span className="logo-effect">hey</span>tter</h3>
+                       <form>
+                           <label htmlFor="email">
+                               {fingerIcon}
+                               <input type="email" placeholder={"Ton email"}/>
+                               {fingerIcon}
+                           </label>
+                           <button>{fingerIcon}Je m'abonne</button>
+                       </form>
+                       <SocialLinks/>
+                   </div>
                 </div>
                 <div className="articles">
                     {

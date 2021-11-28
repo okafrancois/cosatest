@@ -21,7 +21,7 @@ export const FeaturedArticle = props => {
                 </h2>
                 <div className="meta">
                     <a href="/">Rutrum</a>
-                    {!videoCover && <span className="date">{date}</span>}
+                    <span className="date">{date}</span>
                 </div>
             </div>
         </div>

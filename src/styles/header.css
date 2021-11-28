@@ -63,6 +63,10 @@ ul.social-links  a, ul.social-links svg path, .menu-toggle, .burger-bar, #logo, 
     z-index: 100;
 }
 
+header > .social-links{
+    margin-left: 3rem;
+}
+
 .social-links  a {
     display: inline-block;
     margin: 0 5px;
@@ -175,27 +179,27 @@ a.contact-link {
 
 
 .navigation li:nth-child(1) a{
-    transition-delay: 0.3s;
+    transition-delay: 0.1s;
 }
 
 .navigation li:nth-child(2) a{
-    transition-delay: 0.4s;
+    transition-delay: 0.2s;
 }
 
 .navigation li:nth-child(3) a{
-    transition-delay: 0.5s;
+    transition-delay: 0.3s;
 }
 
 .navigation li:nth-child(4) a{
-    transition-delay: 0.6s;
+    transition-delay: 0.4s;
 }
 
 .navigation li:nth-child(5) a{
-    transition-delay: 0.7s;
+    transition-delay: 0.5s;
 }
 
 .navigation li:nth-child(6) a{
-    transition-delay: 0.8s;
+    transition-delay: 0.6s;
 }
 
 .menu-active .navigation li a{
@@ -216,7 +220,7 @@ a.contact-link {
 }
 
 .ext-links {
-    width: 45%;
+    width: 50%;
     display: flex;
     align-items: center;
     font-size: 14px;
