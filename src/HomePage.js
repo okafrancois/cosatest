@@ -185,7 +185,7 @@ const ARTICLES = [
 ]
 const HomePage = () => {
     return(
-        <main className={"main"}>
+        <main>
            <div className="intro">
                <div className="intro-articles">
                    {
@@ -199,20 +199,41 @@ const HomePage = () => {
                </div>
            </div>
             <div className="content">
-                {
-                    ARTICLES.map(item => {
-                        if (item.id > 11){
-                            return  null
-                        }
-                        if (item.featured){
-                            return null
-                        }
-                        if (item.listFeatured){
-                            return <FeaturedListItem key={item.id} title={item.title} cover={item.cover} date={item.date} videoCover={item.videoCover} opened={item.opened}/>
-                        }
-                        return<ListItem key={item.id} title={item.title} cover={item.cover} date={item.date} videoCover={item.videoCover} opened={item.opened}/>
-                    })
-                }
+                <div className="articles">
+                    {
+                        ARTICLES.map(item => {
+                            if (item.id > 11){
+                                return  null
+                            }
+                            if (item.featured){
+                                return null
+                            }
+                            if (item.listFeatured){
+                                return <FeaturedListItem key={item.id} title={item.title} cover={item.cover} date={item.date} videoCover={item.videoCover} opened={item.opened}/>
+                            }
+                            return<ListItem key={item.id} title={item.title} cover={item.cover} date={item.date} videoCover={item.videoCover} opened={item.opened}/>
+                        })
+                    }
+                </div>
+                <div className="newsletter">
+                   Hello there
+                </div>
+                <div className="articles">
+                    {
+                        ARTICLES.map(item => {
+                            if (item.id < 12){
+                                return  null
+                            }
+                            if (item.featured){
+                                return null
+                            }
+                            if (item.listFeatured){
+                                return <FeaturedListItem key={item.id} title={item.title} cover={item.cover} date={item.date} videoCover={item.videoCover} opened={item.opened}/>
+                            }
+                            return<ListItem key={item.id} title={item.title} cover={item.cover} date={item.date} videoCover={item.videoCover} opened={item.opened}/>
+                        })
+                    }
+                </div>
             </div>
         </main>
     )
