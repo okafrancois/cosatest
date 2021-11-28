@@ -110,6 +110,22 @@ main .articles{
     outline: none;
 }
 
+.newsletter label:after{
+    content: "";
+    display: block;
+    height: 2px;
+    width: 0;
+    margin: 0 10px;
+    background: #000;
+    top: -7px;
+    position: relative;
+    transition: all 0.3s ease;
+}
+
+.newsletter label:hover:after{
+    width: 90%;
+}
+
 .newsletter button {
     background: #000;
     color: #fff;
@@ -118,6 +134,7 @@ main .articles{
     display: flex;
     align-items: center;
     width: 50%;
+    cursor: pointer;
 }
 
 .newsletter button .finger-icon {

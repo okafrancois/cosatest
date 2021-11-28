@@ -230,7 +230,7 @@ a.contact-link {
     background: var(--primary-dark);
 }
 
-.navigation li:hover a:after{
+.navigation li a:hover:after{
     width: 100%;
 }
 
