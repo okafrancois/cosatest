@@ -34,3 +34,11 @@ button {
   background: none;
   border: none;
 }
+
+input {
+  border-radius: 0;
+}
+
+input[type="search"] {
+  -webkit-appearance: none;
+}
